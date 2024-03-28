@@ -24,5 +24,6 @@
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![ScreenShot_20240328171720](https://github.com/joosudev/music-player/assets/47118243/d5172124-16fe-40ff-82e5-bca3062c2a38)
+
 
