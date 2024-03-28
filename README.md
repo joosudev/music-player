@@ -10,7 +10,7 @@
 
 **Variedad de Temas:**: Contiene 11 musicas entre openings y ending de algunos de mis anime favoritos.
 
-**Reproducción Continua**:Disfruta de reproducción continua sin interrupciones para sumergirte en el mundo de la música anime.
+**Reproducción Continua**: Disfruta de reproducción continua sin interrupciones para sumergirte en el mundo de la música anime.
 
 ## Tecnologías Stack
 
