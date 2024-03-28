@@ -67,7 +67,7 @@ const music_list = [
         img : '/images/rurouni-kenshin.jpg',
         name : 'Rurouni Kenshi',
         artist : 'Rurouni Kenshi',
-        music: '/music/NarutoOpening-2.mp3'
+        music: '/music/Rurouni-Kenshin.mp3'
     },
     {
         img : '/images/Tokyo.jpe',
