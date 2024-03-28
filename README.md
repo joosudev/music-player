@@ -1,5 +1,5 @@
 # music-player
-**Descipcion:**: Sumergete en el vibrante mundo de la música anime. Con una amplia selección de los mejores openings y endings de algunas de mis series favoritas. ¡Pronto estare actualinzado el Playlist con mas musicas!
+**Descipcion:** Sumergete en el vibrante mundo de la música anime. Con una amplia selección de los mejores openings y endings de algunas de mis series favoritas. ¡Pronto estare actualinzado el Playlist con mas musicas!
 
 ## Utilización
 
