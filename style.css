@@ -1,225 +1,252 @@
+/* Estilos generales */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right,#9a1d86, #1595be);
-    font-weight: bold;
-    }
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #9a1d86, #1595be);
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
-    .title{
-      text-align: center;
-      color: wheat;
-    }
-    
-    .player{
-      height: 95vh;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
+/* Estilos para la barra de scroll vertical */
+::-webkit-scrollbar {
+  width: 20px; /* Ancho de la barra de scroll */
+  background-color: #f1f1f1; /* Color de fondo del track */
+}
+
+/* Estilos para el track (la pista) de la barra de scroll */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color de fondo del track */
+}
+
+/* Estilos para el thumb (el "botón" de la barra de scroll que se mueve) */
+::-webkit-scrollbar-thumb {
+  background-color: #262e3a; /* Color del thumb */
+  border-radius: 5px; /* Bordes redondeados del thumb */
+}
+
+/* Estilos para el thumb cuando está en hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3774FF; /* Color del thumb al hacer hover */
+}
+
+
+.title {
+  text-align: center;
+  color: wheat;
+  margin-top: 20px;
+}
+
+.player {
+  min-height: 85vh; /* Ajuste para asegurar que el contenido no se solape con el footer */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  border: 1px solid transparent;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #ddd;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 80%;
+  max-width: 600px; /* Limita el ancho máximo para mantener el diseño centrado */
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.track-art {
+  margin: 25px;
+  height: 250px;
+  width: 250px;
+  border: 2px solid #FFFAFA;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0px 6px 5px black;
+}
+
+.now-playing {
+  font-size: 1rem;
+}
+
+.track-name {
+  font-size: 2.5rem;
+}
+
+.track-artist {
+  margin-top: 5px;
+  font-size: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 20px; /* Añadido margen superior para separación */
+}
+
+.buttons > div {
+  padding: 15px; /* Ajuste el tamaño de los botones */
+  opacity: 0.8;
+  transition: opacity .2s;
+  text-align: center; /* Alinea el contenido de cada botón al centro */
+}
+
+.buttons > div:hover {
+  opacity: 1.0;
+}
+
+.slider_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Espacio entre controles */
+}
+
+.seek_slider,
+.volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #83A9FF;
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 3px solid #3774FF;
+  cursor: grab;
+  border-radius: 100%;
+}
+
+.current-time,
+.total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+  padding: 10px;
+  color: #000; /* Color de iconos ajustado para mayor visibilidad */
+}
+
+.loader {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader .stroke {
+  background: #f1f1f1;
+  height: 150%;
+  width: 10px;
+  border-radius: 50px;
+  margin: 0 5px;
+  animation: animate 1.4s linear infinite;
+}
+
+@keyframes animate {
+  50% {
+      height: 20%;
+      background: #4286f4;
   }
-    .wrapper{
-      border: 1px solid transparent;
-      padding: 30px;
-      border-radius: 20px;
-      background-color: #ddd;
-      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    }
-    
-    .details {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    }
-    
-    .track-art {
-    margin: 25px;
-    height: 250px;
-    width: 250px;
-    border:2px solid 	#FFFAFA;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    -moz-box-shadow: 0px 6px 5px black;
-    -webkit-box-shadow: 0px 6px 5px black;
-    box-shadow: 0px 6px 5px black;
-    -moz-border-radius:190px;
-    -webkit-border-radius:190px;
-    border-radius:190px;
-    }
-    
-    .now-playing {
-    font-size: 1rem;
-    }
-    
-    .track-name {
-    font-size: 2.5rem;
-    }
-    
-    .track-artist {
-    margin-top: 5px;
-    font-size: 1.5rem;
-    }
-    
-    .buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 30px;
-    }
-    .active{
-        color: black;
-    }
-    
-    .repeat-track,
-    .random-track,
-    .playpause-track,
-    .prev-track,
-    .next-track {
-    padding: 25px;
-    opacity: 0.8;
-    transition: opacity .2s;
-    }
-    
-    .repeat-track:hover,
-    .random-track:hover,
-    .playpause-track:hover,
-    .prev-track:hover,
-    .next-track:hover {
-    opacity: 1.0;
-    }
-    
-    .slider_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    
-    .seek_slider, .volume_slider {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    height: 5px;
-    background: #83A9FF;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-    }
-    
-    .seek_slider::-webkit-slider-thumb,
-    .volume_slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    background: white;
-    border: 3px solid #3774FF;
-    cursor: grab;
-    border-radius: 100%;
-    }
-    
-    .seek_slider:hover,
-    .volume_slider:hover {
-    opacity: 1.0;
-    }
-    
-    .seek_slider {
-    width: 60%;
-    }
-    
-    .volume_slider {
-    width: 30%;
-    }
-    
-    .current-time,
-    .total-duration {
-    padding: 10px;
-    }
-    
-    i.fa-volume-down,
-    i.fa-volume-up {
-    padding: 10px;
-    }
-    
-    i,
-    i.fa-play-circle,
-    i.fa-pause-circle,
-    i.fa-step-forward,
-    i.fa-step-backward,
-    p {
-    cursor: pointer;
-    }
-    .randomActive{
-        color: black;
-    }
-    .rotate {
-        animation: rotation 8s infinite linear;
-    }
-    @keyframes rotation {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(359deg);
-        }
-    }
-    .loader {
-      height: 70px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .loader .stroke{
-        background: #f1f1f1;
-        height: 150%;
-        width: 10px;
-        border-radius: 50px;
-        margin: 0 5px;
-        animation: animate 1.4s linear infinite;
-    }
-      @keyframes animate {
-        50% {
-          height: 20%;
-          background: #4286f4;
-        }
-    
-        100% {
-          background: #4286f4;
-          height: 100%;
-        }
-      }
-      .stroke:nth-child(1){
-          animation-delay: 0s;
-      }
-      .stroke:nth-child(2){
-        animation-delay: 0.3s;
-    }
-    .stroke:nth-child(3){
-        animation-delay: 0.6s;
-    }
-    .stroke:nth-child(4){
-        animation-delay: 0.9s;
-    }
-    .stroke:nth-child(5){
-        animation-delay: 0.6s;
-    }
-    .stroke:nth-child(6){
-        animation-delay: 0.3s;
-    }
-    .stroke:nth-child(7){
-        animation-delay: 0s;
-    }
-    
-    .footer {
-      background-color: #ffffff00;
-      color: #fff;
-      text-align: center;
+
+  100% {
+      background: #4286f4;
+      height: 100%;
+  }
+}
+
+.stroke:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.stroke:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.stroke:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.stroke:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.stroke:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.stroke:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.stroke:nth-child(7) {
+  animation-delay: 0s;
+}
+
+.footer {
+  background-color: #000000; /* Fondo oscuro para el footer */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative; /* Asegura que el footer no se superponga al contenido */
+  bottom: 0; /* Coloca el footer al final de la página */
+  width: 100%;
+  margin-top: 50px;
+}
+
+footer p{
+  margin-left: -15px;
+}
+
+.footer a{
+  margin-left: -30px;
+}
+
+.github-icon {
+  width: 48px;
+  height: 48px;
+}
+
+/* Media queries para ajustar el diseño en diferentes tamaños de pantalla */
+@media screen and (max-width: 768px) {
+  .wrapper {
+      width: 90%;
+  }
+
+.footer p{
+  text-align: center;
+  margin-left: 45px;
+  width: 70%;
+} 
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
       padding: 20px;
-    }
-    
-    .github-icon {
-      margin: auto;
-      display: block;
-      width: 48px;
-      height: 48px;
-    }
-    
+  }
+
+  .footer p{
+    text-align: center;
+    margin-left: 45px;
+    width: 70%;
+  }
+}
